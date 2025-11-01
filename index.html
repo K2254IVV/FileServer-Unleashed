@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FileServer Unleashed - v1.0a beta</title>
+</head>
+<body>
+
+<h1>FS (FileServer) Unleashed</h1>
+<p>FSU is a SMServer (SimpleMediaServer) for PS3 or Other Systems with SimpleWeb Engine like NetFront.</p>
+
+<b> Files: </b>
+<br>
+{% for file in files %}
+  {{ file }}: 
+  <a href="{{ url_for('download_file', filename=file) }}">download</a> | 
+  <a href="{{ url_for('static', filename=file) }}">preview</a>
+  <br>
+{% endfor %}
+
+</body>
+</html>
